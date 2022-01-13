@@ -480,7 +480,7 @@ contract Distributor is Policy {
         uint reward;
         for ( uint i = 0; i < info.length; i++ ) {
             if ( info[ i ].recipient == _recipient ) {
-                reward = nextRewardAt( info[ i ].rate );
+                reward += nextRewardAt( info[ i ].rate );
             }
         }
         return reward;
